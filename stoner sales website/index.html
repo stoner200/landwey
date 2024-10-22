@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoner Autos - Login</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login-container {
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        footer-links a {
+            display: block;
+            margin: 5px 0;
+            text-decoration: none;
+            color: #4CAF50;
+        }
+
+        .sales-container {
+            padding: 20px;
+        }
+
+        car-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        car {
+            background: white;
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: calc(33% - 20px);
+            text-align: center;
+        }
+
+        car img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        h2 {
+            margin: 10px 0;
+        }
+
+        button {
+            margin-top: 10px;
+            background-color: #2196F3;
+        }
+
+        button:hover {
+            background-color: #1976D2;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="login-container">
+        <h1>Stoner Autos</h1>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password">
+
+            <button type="button" id="btn">Login</button>
+        </form>
+        <div class="footer-links">
+            <a href="#">Forgot Password?</a>
+            <a href="#">Create an Account</a>
+        </div>
+    </div>
+
+
+    <div class="sales-container" style="display:none;">
+        <h1>Available Cars</h1>
+        <div class="car-grid">
+            <div class="car">
+                <img src="c:\Users\USER\Downloads\car.01.jfif" width=500px alt="2022 Stoner Cruiser">
+                <h2>2022 Stoner Cruiser</h2>
+                <p>Price: $25,000</p>
+                <p>A spacious SUV perfect for road trips.</p>
+                <button>View Details</button>
+            </div>
+            <div class="car">
+                <img src="c:\Users\USER\Downloads\car.0.jfif" width="500px" alt="2021 Stoner Speedster">
+                <h2>2021 Stoner Speedster</h2>
+                <p>Price: $30,000</p>
+                <p>A fast and sleek sports car.</p>
+                <button>View Details</button>
+            </div>
+            <div class="car">
+                <img src="c:\Users\USER\Downloads\car.03.jfif" width="500px " alt="2023 Stoner Eco">
+                <h2>2023 Stoner Eco</h2>
+                <p>Price: $20,000</p>
+                <p>An efficient hybrid for eco-conscious drivers.</p>
+                <button>View Details</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById('loginForm');
+        console.log(loginForm);
+
+        btn.addEventListener('click', function (event) {
+            console.log(event);
+
+            console.log(username.value);
+
+            if (!username.value || !password.value) {
+                alert('Enter a value');
+            } else {
+                
+                event.preventDefault(); // Prevent form submission
+                document.querySelector('.login-container').style.display = 'none';
+                document.querySelector('.sales-container').style.display = 'block';
+
+            }
+
+        });
+        function gahe(name) {
+            console.log(`How are you ${name}`)
+        }
+        gahe('Stoner')
+
+        // Comparison Operators
+        console.log(12 > 12);
+        console.log(12 > 10);
+        console.log(9 > 10);
+        console.log(9 != 10);
+
+        console.log(10 == '10');
+        console.log(10 == 10);
+        console.log(10 === '10');
+        console.log(10 === 10);
+        console.log(typeof 10);
+        console.log(typeof '10');
+        //    Logical Operators
+        //  AND  &&   /  OR  ||   /  NOT !
+        const me = false
+        const you = 23
+        console.log(me == 12 && you == 21);
+        console.log(me == 12 || you == 21);
+        console.log(me == 10 || you == 21);
+        console.log(!me);
+
+    </script>
+
+</body>
+
+</html>

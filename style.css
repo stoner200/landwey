@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    background-color: aliceblue;
+    margin: 0 auto;
+    background-image: url(image/photo1.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150vh;
+}
+
+nav {
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    position: fixed;
+    width: 90%;
+    z-index: 1;
+}
+
+.title {
+    position: absolute;
+    top: 200px;
+    /* bottom: 20px; */
+    width: 400px;
+}
+
+.dropdown {
+    width: 200px;
+    background-color: white;
+    border-top: 2px solid orange;
+    list-style: none;
+    padding: 12px;
+    padding-left: 0;
+    position: absolute;
+    right: 0;
+    top: 75px;
+    display: none;
+}
+
+.dropdown li {
+    padding-left: 10px;
+}
+
+.dropdown a {
+    /* list-style: none;
+     */
+    text-decoration: none;
+    display: block;
+    padding: 3px;
+    color: black;
+}
+
+.about {
+    padding: 10px;
+    /* background-color: greenyellow; */
+}
+.about:hover .dropdown {
+    display: block;
+}

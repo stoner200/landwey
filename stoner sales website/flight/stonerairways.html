@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stoner Airways - Flight Booking</title>
+    <a href="stonerbookingairways.html">Go back to flightavailable</a>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2e8b57;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #ffffff;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        .booking-button {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .booking-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Stoner Airways Flight Booking</h1>
+
+    <form>
+        <div class="form-group">
+            <label for="departure">Departure City:</label>
+            <input type="text" id="departure" name="departure">
+        </div>
+
+        <div class="form-group">
+            <label for="arrival">Arrival City:</label>
+            <input type="text" id="arrival" name="arrival">
+        </div>
+
+        <div class="form-group">
+            <label for="departure-date">Departure Date:</label>
+            <input type="date" id="departure-date" name="departure-date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="return-date">Return Date:</label>
+            <input type="date" id="return-date" name="return-date">
+        </div>
+
+        <div class="form-group">
+            <label for="passengers">Number of Passengers:</label>
+            <select id="passengers" name="passengers">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>]
+        </div>
+
+        <div class="form-group">
+            <label for="name">Passenger Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+
+
+        <button class="booking-button" onclick="bookFlight(event)">Book Flight</button></a>
+        +
+</body>
+
+</html>
+<script>
+    const flightData = [
+        {
+            airliNum: "A123",
+            arrival: { state: 'lagos', airport: 'muritala airport' },
+            departure: { state: 'enugu', airport: 'enugu federal airport' },
+            departDate: '12/03/2024 ',
+            arrivalDate: '12/03/2024 ',
+        },
+        {
+            airliNum: "A124",
+            arrival: { state: 'lagos', airport: 'muritala airport' },
+            departure: { state: 'crossriver', airport: 'Adeyeye airport' },
+            departDate: '12/03/2024 ',
+            arrivalDate: '12/03/2024 ',
+        },
+        {
+            airliNum: "A103",
+            arrival: { state: 'lagos', airport: 'marina airport' },
+            departure: { state: 'enugu', airport: 'enugu federal airport' },
+            departDate: '12/03/2024 ',
+            arrivalDate: '12/03/2024 ',
+        },
+        {
+            airliNum: "A113",
+            arrival: { state: 'abuja', airport: 'federal capital territory airport' },
+            departure: { state: 'benue', airport: 'benue federal airport' },
+            departDate: '12/03/2024 ',
+            arrivalDate: '12/03/2024 ',
+        },
+    ]
+    function bookFlight(e) {
+        e.preventDefault()
+        const depart = document.getElementById('departure').value
+        const arrival = document.getElementById('arrival').value
+        // const bookedFlight = flightData.find(flight => {
+        //     return flight.departure
+        // })
+
+        // if (depart === bookedFlight.departure.state) {
+        //     alert('yes')
+        // }
+        let flight;
+       const book = flightData.map(flight=>flight)
+        console.log(flight.airliNum);
+        
+        // if (depart==book.departure.state) {
+        //     alert('yes')
+        // } else {
+        //     alert('no')
+        // }
+    }
+
+
+</script>

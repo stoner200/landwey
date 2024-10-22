@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decreasing Function with Button</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #numberDisplay {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        #decreaseButton {
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="numberDisplay">10</div>
+    <button id="decreaseButton">Decrease</button>
+
+    <script>
+        // Initial value
+        let number = 10;
+
+        // Get references to the display and button
+        const numberDisplay = document.getElementById('numberDisplay');
+        const decreaseButton = document.getElementById('decreaseButton');
+
+        // Update the display with the current number
+        function updateDisplay() {
+            numberDisplay.textContent = number;
+        }
+
+        // Decrease the number when the button is clicked
+        decreaseButton.addEventListener('click', () => {
+            number--; // Decrease the number by 1
+            updateDisplay(); // Update the display
+        });
+
+        // Initial display update
+        updateDisplay();
+    </script>
+</body>
+
+</html>

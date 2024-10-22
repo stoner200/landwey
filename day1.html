@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model -DOM</title>
+    <style>
+        #container {
+            background-color: blue;
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <p onmouseover="document.querySelector('p').style.color='red'"></p>
+    </div>
+    <button onclick="increase()">Click</button>
+    <div id="numberDisplay">10</div>
+    <button id="decreaseButton">Decrease</button>
+
+
+</body>
+
+</html>
+<script>// Comments can make code readable
+    // innerText, innerHTML, textContent
+    let count = 0
+    function increase() {
+        // const div = document.getElementById('container')
+        // div.style.backgroundColor = 'red'
+        // div.prepend('Render')
+        // count = count + 1
+        count++
+        document.querySelector('p').innerHTML = count
+    }
+    let number = 10;
+
+    // Get references to the display and button
+    const numberDisplay = document.getElementById('numberDisplay');
+    const decreaseButton = document.getElementById('decreaseButton');
+
+    // Update the display with the current number
+    function updateDisplay() {
+        numberDisplay.textContent = number;
+    }
+
+    // Decrease the number when the button is clicked
+    decreaseButton.addEventListener('click', () => {
+        number--; // Decrease the number by 1
+        updateDisplay(); // Update the display
+    });
+
+    // Initial display update
+    updateDisplay();
+    // change()
+    // Welcome to 30DaysOfJavaS nj7yk cript
+
+    /*
+    Comments can make code readable, easy to reuse and informative
+    */
+    // Declaring variables with different data types
+    let stringVar = "Hello, World!"; // String
+    let booleanVar = true; // Boolean
+    let undefinedVar; // Undefined
+    let nullVar = null; // Null
+
+    // Declaring variables without assigning values
+    let firstName;
+    let lastName;
+    let maritalStatus;
+    let country;
+
+    // Declaring variables with assigned values
+    let age = 25;
+    let isStudent = false;
+    let job = "Software Developer";
+    let city = "New York";
+
+    // Declaring variables in multiple lines
+    // let firstName = "John";
+    // let lastName = "Doe";
+    // let maritalStatus = true;    
+    // let country = "USA";
+    // let age = 25;
+
+    // Declaring variables in a single line
+    firstName = "John"
+    lastName = "Doe"
+    maritalStatus = "Single"
+    country = "USA"
+    age = 25;
+
+    // Declaring variables for ages
+    let myAge = 25;
+    let yourAge = 30;
+
+    // Logging to the browser console
+    console.log(`I am ${age} years old.`);
+    console.log(`You are ${yourAge} years old.`);
+</script>
